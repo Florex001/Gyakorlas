@@ -1,0 +1,19 @@
+{
+  "name": "userbackend",
+  "version": "1.0.0",
+  "description": "Gyakorlás a szakmai vizsgára",
+  "main": "app.js",
+  "scripts": {
+    "strat": "nodemon server.js"
+  },
+  "author": "Balogh Dávid",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}

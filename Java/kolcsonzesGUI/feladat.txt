@@ -1,0 +1,39 @@
+1. Készíts egy grafikus felületű (GUI) programot az alábbiak szerint:
+Hozz létre egy JavaFX projektet kolcsonzesGUI néven! A program egy ablakkal
+ fog rendelkezni! Ehhez alakítsa át a projekt alapértelmezett állománystruktúráját!
+
+2. Hozz létre egy osztály Kolcsonzes néven, olyan adattagokkal, amelyek képesek tárolni
+ a kolcsonzesek.txt állomány soraiban található adatokat! Ezeket az adatokat közvetlenül
+  csak az osztályból lehessen elérni! Az osztály rendelkezzen egy általános konstruktorral,
+   amely paramétereinek segítségével beállítható az osztály adattagjainak értéke! Az osztály
+    rendelkezzen egy olyan metódussal, amely képes az osztály tartalmát szövegesen visszaadni!
+     A metódus adja vissza a kölcsönző nevét és mellette az elvitel időpontját zárójelben! Pl. “Mihály (09:55)”
+
+3. A forrásállományhoz hasonló fájl beolvasásához hozzon létre a Kolcsonzes osztályban egy beolvas
+nevű statikus metódust, amely egy a Kolcsonzes osztály példányaiból álló listát ad vissza! A beolvasandó
+ állomány nevét paraméterrel lehessen megadni a metódusnak! A fájl olvasása során keletkező esetleges kivételeket
+  a program adja át a metódus hívásának helyére!
+
+4. A program indításakor jelenjen meg egy olyan ablak, amelynek segítségével fájlt lehet megnyitni!
+ Ezt az ablakot a forrásállomány megnyitására fogja használni a felhasználó! A fájl megadása után
+ a program olvassa be belőle az adatokat, ehhez az előzőleg megírt metódust használja!
+
+5. A program fő ablakán az alábbi beállítások legyenek alkalmazva:
+    -Az ablak címsorában a “Kölcsönzések kezelése” felirat jelenjen meg!
+    -Az ablak mérete legyen 650x400 képpont és ne legyen átméretezhető!
+    -Az ablak induláskor jelenjen meg a képernyő közepén!
+
+6. A beolvasott adatokat a program jelenítse meg az ablakon belül egy listában! A listából lehessen
+kiválasztani az adott kölcsönzést. A kölcsönzés adatai jelenjenek meg a lista mellett, úgy hogy azok módosíthatóak
+legyenek! A program hasonlítson az alábbi mintára:
+
+7. Legyen a kölcsönzés adatai alatt egy “Adatok módosítása” feliratú gomb, amelyre ha a felhasználó rákattint, akkor az adott
+ kölcsönzés adatai kerüljenek tárolásra!
+
+8. A program jelenítse meg az elvitel és a visszahozatal ideje között eltelt időt a fenti mintán látható formában!
+ A beviteli mező ne legyen módosítható, a mező értéke csak a kölcsönzés kiválasztásakor és az “Adatok módosítása” gombra kattintva frissüljön!
+
+9. A programból való kilépéskor jelenjen meg egy párbeszédablakban egy kérdés, hogy szeretné-e a felhasználó menteni az
+ elvégzett módosításokat! Az “Igen” gombra kattintva jelenjen meg egy mentés helyének megadására szolgáló ablak, amiben
+  a felhasználónak legyen lehetősége megadni a mentés helyét! A megadott állományba a forrásállománynak megegyező módon
+   kerüljön mentésre az adatok! A “Nem” gombra kattintva pedig mentés nélkül lépjen ki a program.

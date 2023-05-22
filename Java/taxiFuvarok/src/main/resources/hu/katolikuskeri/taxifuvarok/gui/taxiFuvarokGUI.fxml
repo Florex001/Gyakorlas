@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.katolikuskeri.taxifuvarok.gui.Controlers.taxiFuvarokGUIController">
+   <children>
+      <HBox layoutX="157.0" layoutY="150.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="223.0">
+               <children>
+                  <Label text="Taxi fuvarok kezelése">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ListView fx:id="lista" onMouseClicked="#kivalasztas" prefHeight="359.0" prefWidth="222.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="378.0">
+               <children>
+                  <GridPane prefHeight="317.0" prefWidth="378.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="204.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="174.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Fuvart végző taxi azonosítója:" />
+                        <Label layoutX="10.0" layoutY="22.0" text="Fuvar dátuma:" GridPane.rowIndex="1" />
+                        <Label layoutX="10.0" layoutY="62.0" text="Fuvar időpontja:" GridPane.rowIndex="2" />
+                        <Label layoutX="10.0" layoutY="102.0" text="Fuvar időtartama:" GridPane.rowIndex="3" />
+                        <Label layoutX="10.0" layoutY="142.0" text="Megtett távolság mérföldben:" GridPane.rowIndex="4" />
+                        <Label layoutX="10.0" layoutY="182.0" text="Viteldíj ($):" GridPane.rowIndex="5" />
+                        <Label layoutX="10.0" layoutY="222.0" text="Borravaló ($):" GridPane.rowIndex="6" />
+                        <Label layoutX="10.0" layoutY="261.0" text="Fizetési mód:" GridPane.rowIndex="7" />
+                        <TextField fx:id="taxi_id" disable="true" GridPane.columnIndex="1" />
+                        <DatePicker fx:id="datepicker" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="idopont" disable="true" layoutX="212.0" layoutY="18.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="idotartam" layoutX="212.0" layoutY="98.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="tavolsag" layoutX="212.0" layoutY="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="viteldij" disable="true" layoutX="212.0" layoutY="178.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="borravalo" disable="true" layoutX="212.0" layoutY="218.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <ChoiceBox fx:id="fizmod" prefHeight="24.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="3.0" right="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#modositas" text="Fuvar adatainak módosítása">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
